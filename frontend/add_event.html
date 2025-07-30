@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Event</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Add Event</h1>
+    <a href="index.html">Back</a>
+  </header>
+
+  <main>
+    <label>Type:
+      <select id="type_of_event">
+        <option value="normal">Normal Event</option>
+        <option value="special">Special Event</option>
+      </select>
+    </label>
+
+    <div id="normal-form">
+      <input type="text" id="tile" placeholder="Title" />
+      <input type="time" id="time" />
+      <input type="number" id="delay" placeholder="Delay (sec)" />
+      <select id="days">
+        <option>Weekdays</option>
+        <option>Weekends</option>
+        <option>All days</option>
+        <option>Some days</option>
+      </select>
+      <input type="text" id="tone" placeholder="Tone Name" />
+    </div>
+
+    <div id="special-form">
+      <input type="date" id="specialDate" />
+      <input type="time" id="specialTime" />
+      <input type="text" id="specialDescription" placeholder="Description" />
+      <input type="text" id="specialTone" placeholder="Tone Name" />
+    </div>
+
+    <button onclick="saveEvent()">Save</button>
+  </main>
+
+  <script src="assets/scripts/main.js"></script>
+</body>
+</html>
